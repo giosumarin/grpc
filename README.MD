@@ -8,3 +8,9 @@ To compile the proto files, you can do it both within IntelliJ as well as with t
 The command you need to launch is:
 
 mvn package
+
+To launch a "main" from the command line:
+
+mvn package exec:java -Dexec.mainClass=chat.ChatServer
+
+(replace "chat.ChatServer" with the class containing a main method that you need to launch)
