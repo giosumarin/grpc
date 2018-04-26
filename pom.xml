@@ -8,6 +8,9 @@
     <artifactId>grpchelloserver</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+
+
     <dependencies>
         <dependency>
             <groupId>io.grpc</groupId>
@@ -62,6 +65,8 @@
         </dependency>
     </dependencies>
 
+
+
     <build>
         <extensions>
             <extension>
@@ -71,6 +76,16 @@
             </extension>
         </extensions>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
